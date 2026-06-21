@@ -8,7 +8,7 @@ from app.routes import health
 app = FastAPI(
     title=settings.APP_NAME,
     version=settings.APP_VERSION,
-    description="API para um sistema individual de estudos com flashcards de questões de vestibular."
+    description="API para um sistema individual de estudos com flashcards de questões de vestibular.",
 )
 
 
@@ -18,7 +18,7 @@ app.add_middleware(
         settings.FRONTEND_URL,
         "http://localhost:3000",
         "http://localhost:5173",
-        "http://127.0.0.1:5173"
+        "http://127.0.0.1:5173",
     ],
     allow_credentials=True,
     allow_methods=["*"],
@@ -34,5 +34,5 @@ def root():
     return {
         "message": "Vestibular Flashcards API",
         "docs": "/docs",
-        "health": "/health"
+        "health": "/health",
     }

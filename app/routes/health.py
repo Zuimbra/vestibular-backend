@@ -1,10 +1,11 @@
 from fastapi import APIRouter
+
 from app.config import settings
 
 
 router = APIRouter(
     prefix="/health",
-    tags=["Health"]
+    tags=["Health"],
 )
 
 
@@ -14,5 +15,5 @@ def health_check():
         "status": "ok",
         "app": settings.APP_NAME,
         "version": settings.APP_VERSION,
-        "environment": settings.ENVIRONMENT
+        "environment": settings.ENVIRONMENT,
     }
