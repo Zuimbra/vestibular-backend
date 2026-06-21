@@ -7,4 +7,7 @@ __pycache__/
 uploads/*
 !uploads/.gitkeep
 
+vestibular.db
+*.db
+
 .pytest_cache/
